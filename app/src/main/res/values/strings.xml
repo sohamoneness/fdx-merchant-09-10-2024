@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FdxMerchant</string>
+    <string-array name="amc_service">
+        <item>select</item>
+        <item>monthly</item>
+        <item>quarterly</item>
+        <item>yearly</item>
+        <item>on demand</item>
+    </string-array>
+    <string name="terms"><u>Terms of service</u></string>
+    <string name="policy"><u>Privacy policy</u></string>
+    <string name="today_s_norder">Today’s \nOrder</string>
+    <string name="google_map_api_key">AIzaSyDJSr0Wt34aSzwIyAv-86pbRXkiQqrCpEs</string>
+</resources>

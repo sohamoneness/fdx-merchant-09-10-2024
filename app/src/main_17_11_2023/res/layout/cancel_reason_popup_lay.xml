@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="16dp"
+    android:background="@drawable/rounded_corner_8_white_bg"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/acceptLL"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Preparation time "
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".15"
+                android:lineHeight="16dp"
+                android:text="0 min"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <SeekBar
+                android:id="@+id/sbTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:max="60"
+                android:min="0"
+                android:progressBackgroundTint="#65B869"
+                android:progressTint="#65B869" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".15"
+                android:lineHeight="16dp"
+                android:text="60 min"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnOk"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/accept_btn_bg"
+            android:text="Accept"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rejectLL"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Reason :"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:lineHeight="17dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rgStock"
+            android:layout_marginTop="8dp">
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rbComplete"
+                    android:layout_marginLeft="4dp"
+                    android:text="Complete out of stock"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:textSize="11sp"
+                    android:textColor="#767676"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="Partials out of stock"
+                    android:textSize="11sp"
+                    android:id="@+id/rbPartial"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:textColor="#767676"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rbMin"
+                    android:text="Order after 30 min"
+                    android:layout_marginLeft="4dp"
+                    android:textSize="11sp"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:textColor="#767676"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="Order after 60 min"
+                    android:textSize="11sp"
+                    android:id="@+id/rbHr"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:textColor="#767676"/>
+
+            </GridLayout>
+
+        </RadioGroup>
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rgTime"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnReject"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/reject_btn_bg"
+            android:text="Reject"
+            android:textAllCaps="false"
+            android:textColor="#B02A37"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
